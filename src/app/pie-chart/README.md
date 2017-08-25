@@ -10,6 +10,6 @@ Integrate angular 2 app with interactive Doughnut charts having images on slices
    $ cd angular-2-d3-charts
    $ npm install
    $ npm start
-   Navigate to http://localhost:3000/doughnutchart</pre>
+   Navigate to http://localhost:3000/piechart</pre>
 
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png">
+<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png">

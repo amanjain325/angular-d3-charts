@@ -4,11 +4,11 @@ declare let d3: any;
 declare let $: any;
 
 @Component({
-  selector: 'doughnut-chart',
-  styleUrls: ['./doughnut-chart.component.css'],
-  templateUrl: './doughnut-chart.component.html'
+  selector: 'pie-chart',
+  styleUrls: ['./pie-chart.component.css'],
+  templateUrl: './pie-chart.component.html'
 })
-export class DoughnutChartComponent implements OnInit {
+export class PieChartComponent implements OnInit {
   public selectedId: any;
   public baseUrl: string =
   'https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/'
@@ -79,13 +79,11 @@ export class DoughnutChartComponent implements OnInit {
 
     let arc = d3.svg.arc()
       .outerRadius(150)
-      .innerRadius(70);
 
     let arcNew = d3.svg.arc()
       .outerRadius(160)
-      .innerRadius(70);
 
-    let svg = d3.select('#donutChart').append('svg')
+    let svg = d3.select('#pieChart').append('svg')
       .attr('width', 330)
       .attr('height', 330)
       .append('g')
@@ -138,10 +136,6 @@ export class DoughnutChartComponent implements OnInit {
       .attr('transform', function (d) {
         return 'translate(' + arc.centroid(d) + ')';
       })
-      .append('svg:image')
-      .attr('xlink:href', function (d) {
-        return chartComponent.baseUrl + chartComponent.slicesImages[d.data.event];
-      })
       .attr('id', function (d) {
         return chartComponent.baseUrl + chartComponent.slicesImages[d.data.event];
       })
@@ -178,17 +172,6 @@ export class DoughnutChartComponent implements OnInit {
               return arcNew(d);
             }
           });
-      });
-
-    svg.append('svg:image')
-      .attr('id', 'center_image')
-      .attr('x', -60)
-      .attr('y', -60)
-      .attr('width', 120)
-      .attr('height', 120)
-      .attr('cursor', 'pointer').attr('xlink:href', chartComponent.baseUrl + 'assets/img/6.png')
-      .on('click', function click(d) {
-        alert('Middle circle clicked');
       });
 
     g.on('click', function click(d) {
