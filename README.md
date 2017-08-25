@@ -11,7 +11,7 @@ Integrate angular 2 app with interactive d3 charts e.g. Doughnut, Pie, Single Ba
    $ cd angular-2-d3-charts
    $ npm install
    $ npm start
-   Now Navigate to http://localhost:3000/</pre>
+   Navigate to http://localhost:3000/</pre>
    <ul>
   <li> Navigate to every example and follow the instructions provided.</li>
 </ul>
