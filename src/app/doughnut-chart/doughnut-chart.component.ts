@@ -10,6 +10,8 @@ declare let $: any;
 })
 export class DoughnutChartComponent implements OnInit {
   public selectedId: any;
+  public baseUrl: string =
+  'https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/'
   public slicesImages: Object = {
     2: 'assets/img/1.png',
     4: 'assets/img/2.png',
@@ -107,7 +109,6 @@ export class DoughnutChartComponent implements OnInit {
         d3.selectAll('path').transition()
           .duration(50)
           .attr('d', function (d) {
-            console.log(d, '21');
             if (this.selectedId === d.data.id) {
               d.data.expanded = true;
               this.selectedId = null;
@@ -121,7 +122,6 @@ export class DoughnutChartComponent implements OnInit {
         d3.select(this).transition()
           .duration(50)
           .attr('d', function (d) {
-            console.log(d, '22');
             if (d.data.expanded) {
               this.selectedId = null;
               d.data.expanded = false;
@@ -140,10 +140,10 @@ export class DoughnutChartComponent implements OnInit {
       })
       .append('svg:image')
       .attr('xlink:href', function (d) {
-        return chartComponent.slicesImages[d.data.event];
+        return chartComponent.baseUrl + chartComponent.slicesImages[d.data.event];
       })
       .attr('id', function (d) {
-        return chartComponent.slicesImages[d.data.event];
+        return chartComponent.baseUrl + chartComponent.slicesImages[d.data.event];
       })
       .attr('width', imageWidth)
       .attr('height', imageHeight)
@@ -186,7 +186,7 @@ export class DoughnutChartComponent implements OnInit {
       .attr('y', -60)
       .attr('width', 120)
       .attr('height', 120)
-      .attr('cursor', 'pointer').attr('xlink:href', 'assets/img/6.png')
+      .attr('cursor', 'pointer').attr('xlink:href', chartComponent.baseUrl + 'assets/img/6.png')
       .on('click', function click(d) {
         alert('1');
       });
@@ -194,7 +194,8 @@ export class DoughnutChartComponent implements OnInit {
     g.on('click', function click(d) {
       if (d.data.expanded) {
         d3.select('#centerData').style('display', 'block');
-        $('#slice_image').attr('src', chartComponent.slicesImages[d.data.event]);
+        $('#slice_image').attr('src',
+          chartComponent.baseUrl + chartComponent.slicesImages[d.data.event]);
         $('#slice_value').text('label: ' + d.data.label + ';' + '\n' +
           'value: ' + d.data.value + ';' + '\n' +
           'percentage: ' + Math.round(d.data.percentage) + '%');
