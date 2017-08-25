@@ -5,7 +5,7 @@ Integrate angular 2 app with interactive d3 charts e.g. Doughnut, Pie, Single Ba
  <a href="https://plnkr.co/edit/avvvNelREDhFdKCTe8eh?p=preview">View Demo</a>
 </h4>
 <h4>2. <a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/pie-chart">Pie Chart:</a>
- <a href="https://plnkr.co/edit/avvvNelREDhFdKCTe8eh?p=preview">View Demo</a>
+ <a href="https://plnkr.co/edit/UlZJ8FR4YKIwL3Y7VRlo">View Demo</a>
 </h4>
 
 

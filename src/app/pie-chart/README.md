@@ -1,6 +1,6 @@
 <h2>Pie Chart:</h2>
 Integrate angular 2 app with interactive Doughnut charts having images on slices.
-<a target="_blank" href="https://plnkr.co/edit/avvvNelREDhFdKCTe8eh?p=preview">View Demo</a>
+<a target="_blank" href="https://plnkr.co/edit/UlZJ8FR4YKIwL3Y7VRlo">View Demo</a>
 
 <h2>Steps</h2>
 <ul>
