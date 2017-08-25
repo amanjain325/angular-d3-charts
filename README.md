@@ -1,0 +1,1 @@
+Integrate your angular 2 app with d3 charts e.g. Doughnut, Pie, Single Bar chart, Multiple bar chart and Stacked bar chart
