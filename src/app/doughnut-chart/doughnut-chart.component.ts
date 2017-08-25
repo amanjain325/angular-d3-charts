@@ -31,7 +31,6 @@ export class DoughnutChartComponent implements OnInit {
 
   public renderChart() {
     let chartComponent = this;
-
     let imageWidth = 40;
     let imageHeight = 40;
     let width = 400;
@@ -141,11 +140,7 @@ export class DoughnutChartComponent implements OnInit {
       })
       .append('svg:image')
       .attr('xlink:href', function (d) {
-        if (d.data.percentage > 8) {
-          return chartComponent.slicesImages[d.data.event];
-        } else {
-          return null;
-        }
+        return chartComponent.slicesImages[d.data.event];
       })
       .attr('id', function (d) {
         return chartComponent.slicesImages[d.data.event];
@@ -200,8 +195,8 @@ export class DoughnutChartComponent implements OnInit {
       if (d.data.expanded) {
         d3.select('#centerData').style('display', 'block');
         $('#slice_image').attr('src', chartComponent.slicesImages[d.data.event]);
-        $('#slice_value').text('label: ' + d.data.label + ':'  + '\n' +
-          'value: ' + d.data.value + '\n' +
+        $('#slice_value').text('label: ' + d.data.label + ';' + '\n' +
+          'value: ' + d.data.value + ';' + '\n' +
           'percentage: ' + Math.round(d.data.percentage) + '%');
       } else {
         d3.select('#centerData').style('display', 'none');
