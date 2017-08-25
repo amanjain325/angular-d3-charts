@@ -14,4 +14,4 @@ Integrate angular 2 app with interactive Doughnut charts having images on slices
   <li> Navigate to every example and follow the instructions provided.</li>
 </ul>
 
-<img src="assets/img/donut-chart-example.png">
+<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png">
