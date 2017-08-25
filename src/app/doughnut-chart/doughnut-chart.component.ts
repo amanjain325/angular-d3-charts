@@ -188,7 +188,7 @@ export class DoughnutChartComponent implements OnInit {
       .attr('height', 120)
       .attr('cursor', 'pointer').attr('xlink:href', chartComponent.baseUrl + 'assets/img/6.png')
       .on('click', function click(d) {
-        alert('1');
+        alert('Middle circle clicked');
       });
 
     g.on('click', function click(d) {
