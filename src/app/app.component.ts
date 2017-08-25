@@ -7,6 +7,14 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
+  <ol>
+  <li>
+  <a routerLink="/doughnutchart">Doughnut Chart</a>
+  </li>
+  <li>  
+  <a routerLink="/piechart">Pie Chart</a>
+  </li>
+  </ol>
       <router-outlet></router-outlet>
   `
 })
