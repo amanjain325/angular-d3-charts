@@ -10,6 +10,34 @@ Integrate angular 2 app with interactive Doughnut charts having images on slices
    $ cd angular-2-d3-charts
    $ npm install
    $ npm start
-   Navigate to <a href="localhost:3000/singlebarchart" target="_blank">localhost:3000/singlebarchart</a></pre>
+   Navigate to http://localhost:3000/piechart</pre>
 
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png">
+<h2>How to integrate</h2>
+<p>Add this script in index.html</p>
+<pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+</pre>
+<p>Add the css to your style.css</p>
+<pre>
+.tick text{
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #4C5554;
+  stroke-width: 1;
+}
+
+.x.axis .tick line{
+display: none
+}
+
+.domain{
+    display: block !important;
+    stroke: #4C5554 !important;
+    stroke-width: 2 !important;
+}
+</pre>
+<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png">
