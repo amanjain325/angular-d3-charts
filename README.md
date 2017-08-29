@@ -20,7 +20,7 @@ Integrate angular 2 app with interactive d3 charts e.g. Doughnut, Pie, Single Ba
 </pre>
 
 <ul>
-  <li>Clone this repository into a new project folder.</li>
+  <li>Clone this repository into a new folder.</li>
   </ul>
 <pre>   $ git clone https://github.com/amanjain325/angular-2-d3-charts.git
    $ cd angular-2-d3-charts

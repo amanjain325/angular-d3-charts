@@ -9,7 +9,7 @@ Integrate angular 2 app with interactive Doughnut charts having images on slices
 </pre>
 
 <ul>
-  <li>Clone this repository into a new project folder.</li>
+  <li>Clone this repository into a new folder.</li>
   </ul>
 <pre>   $ git clone https://github.com/amanjain325/angular-2-d3-charts.git
    $ cd angular-2-d3-charts
