@@ -1,17 +1,16 @@
 Integrate angular 2 app with interactive d3 charts e.g. Doughnut, Pie, Single Bar chart, Multiple bar chart and Stacked bar chart.
 
 <h2>Charts</h2>
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/doughnut-chart">1. Doughnut Chart:</a></h3> <span> <a href="https://embed.plnkr.co/yb7541/">View Demo</a></span>
+<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/doughnut-chart">1. Doughnut Chart:</a></h3>
+<a href="https://embed.plnkr.co/yb7541/">View Demo</a>
 <img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png" />
 
-
-<h4>2. <a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/pie-chart">Pie Chart:</a>
+<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/pie-chart">2. Pie Chart:</a></h3>
  <a href="https://embed.plnkr.co/i3qi1z/">View Demo</a>
-</h4>
-<h4>2. <a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/single-bar-chart">Single Bar Chart:</a>
+<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png">
+<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/single-bar-chart">3. Single Bar Chart:</a></h3>
  <a href="https://embed.plnkr.co/i3qi1z/">View Demo</a>
-</h4>
-
+<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png">
 
 <h2>Steps</h2>
 <ul>
