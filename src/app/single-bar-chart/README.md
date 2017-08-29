@@ -41,7 +41,7 @@ display: none
 }
 </pre>
 <h2>Code: </h2>
-<pre>
+
     public hours = {
       4: '12-4 AM',
       8: '4-8 AM',
@@ -147,6 +147,6 @@ display: none
       .attr('y', (d) => { return y(d.y0 + d.y); })
       .attr('height', (d) => { return y(d.y0) - y(d.y0 + d.y); });
   }
-</pre>
+
 
 <img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png">
