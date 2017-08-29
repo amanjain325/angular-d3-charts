@@ -146,7 +146,6 @@ display: none
       .delay(100)
       .attr('y', (d) => { return y(d.y0 + d.y); })
       .attr('height', (d) => { return y(d.y0) - y(d.y0 + d.y); });
-  }
-
-
+      }
+      
 <img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png">
