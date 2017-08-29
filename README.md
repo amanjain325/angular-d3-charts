@@ -1,9 +1,9 @@
 Integrate angular 2 app with interactive d3 charts e.g. Doughnut, Pie, Single Bar chart, Multiple bar chart and Stacked bar chart.
 
 <h2>Charts</h2>
-<h2><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/doughnut-chart">Doughnut Chart:</a></h2>
+<h2><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/doughnut-chart">1. Doughnut Chart:</a></h2> <span> <a href="https://embed.plnkr.co/yb7541/">View Demo</a></span>
 <img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png" />
-<a href="https://embed.plnkr.co/yb7541/">View Demo</a>
+
 
 <h4>2. <a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/pie-chart">Pie Chart:</a>
  <a href="https://embed.plnkr.co/i3qi1z/">View Demo</a>
