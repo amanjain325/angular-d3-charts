@@ -15,7 +15,10 @@ import { AppState } from './app.service';
   <a routerLink="/piechart">Pie Chart</a>
   </li>
   <li>  
-  <a routerLink="/singlebarchart">Single Bar Chart</a>
+  <a routerLink="/singlebarchart">Single Bar Chart / Bar Chart</a>
+  </li>
+  <li>  
+  <a routerLink="/multibarchart">Multi Bar Chart</a>
   </li>
   </ol>
       <router-outlet></router-outlet>

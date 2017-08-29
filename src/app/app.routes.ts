@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DoughnutChartComponent } from './doughnut-chart';
 import { PieChartComponent } from './pie-chart';
 import { SingleBarChartComponent } from './single-bar-chart';
+import { MultiBarChartComponent } from './multi-bar-chart';
 
 import { DataResolver } from './app.resolver';
 
@@ -10,5 +11,6 @@ export const ROUTES: Routes = [
   { path: 'doughnutchart',  component: DoughnutChartComponent },
   { path: 'piechart',  component: PieChartComponent },
   { path: 'singlebarchart',  component: SingleBarChartComponent },
+  { path: 'multibarchart',  component: MultiBarChartComponent },
   { path: '**',  component: DoughnutChartComponent },
 ];
