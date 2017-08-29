@@ -11,6 +11,8 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { DoughnutChartComponent } from './doughnut-chart';
 import { PieChartComponent } from './pie-chart';
+import { SingleBarChartComponent } from './single-bar-chart';
+
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -32,6 +34,7 @@ type StoreType = {
     AppComponent,
     DoughnutChartComponent,
     PieChartComponent,
+    SingleBarChartComponent,
   ],
   imports: [
     BrowserModule,
