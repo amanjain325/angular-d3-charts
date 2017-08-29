@@ -1,6 +1,6 @@
 <h2>Bar Chart:</h2>
 Integrate angular 2 app with interactive Bar chart having transitions on loading.
-<a target="_blank" href="https://embed.plnkr.co/i3qi1z/">View Demo</a>
+<a target="_blank" href="https://embed.plnkr.co/x8ZgGC/">View Demo</a>
 
 <h2>Steps</h2>
 
