@@ -4,7 +4,7 @@ Integrate angular 2 app with interactive Doughnut charts having images on slices
 
 <h2>Steps</h2>
 
-<p>Add this script in index.html</p>
+<p>Script in index.html</p>
 <pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 </pre>
