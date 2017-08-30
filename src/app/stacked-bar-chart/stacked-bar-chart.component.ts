@@ -10,21 +10,19 @@ declare let $: any;
 })
 export class StackedBarChartComponent implements OnInit {
 
-  public obj = {
-    0: 'Bar 1',
-    1: 'Bar 2',
-    2: 'Bar 3',
-    3: 'Bar 4',
-    4: 'Bar 5',
-    5: 'Bar 6',
-  };
-
   public ngOnInit() {
     this.renderChart();
   }
 
   public renderChart() {
-    let chartComponent = this;
+    let obj = {
+      0: 'Bar 1',
+      1: 'Bar 2',
+      2: 'Bar 3',
+      3: 'Bar 4',
+      4: 'Bar 5',
+      5: 'Bar 6',
+    };
     let data = [
       { xAxis: 0, value1: 9, value2: 10, value3: 11 },
       { xAxis: 1, value1: 10, value2: 11, value3: 12 },
@@ -101,7 +99,7 @@ export class StackedBarChartComponent implements OnInit {
       });
     });
 
-    x0.domain(data.map((d: any) => { return chartComponent.obj[d.xAxis]; }));
+    x0.domain(data.map((d: any) => { return obj[d.xAxis]; }));
     x1.domain(d3.keys(innerColumns)).rangeRoundBands([0, x0.rangeBand()]);
 
     y.domain([0, d3.max(data, (d) => {
@@ -131,7 +129,7 @@ export class StackedBarChartComponent implements OnInit {
       .data(data)
       .enter().append('g')
       .attr('class', 'g')
-      .attr('transform', (d) => { return 'translate(' + x0(chartComponent.obj[d.xAxis]) + ',0)'; });
+      .attr('transform', (d) => { return 'translate(' + x0(obj[d.xAxis]) + ',0)'; });
     stackedbars.selectAll('rect')
       .data((d) => { return d.columnDetails; })
       .enter().append('rect')

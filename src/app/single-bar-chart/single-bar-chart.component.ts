@@ -10,21 +10,20 @@ declare let $: any;
 })
 export class SingleBarChartComponent implements OnInit {
 
-  public obj = {
-    0: 'Bar 1',
-    1: 'Bar 2',
-    2: 'Bar 3',
-    3: 'Bar 4',
-    4: 'Bar 5',
-    5: 'Bar 6',
-  };
-
   public ngOnInit() {
     this.renderChart();
   }
 
   public renderChart() {
-    let chartComponent = this;
+    let obj = {
+      0: 'Bar 1',
+      1: 'Bar 2',
+      2: 'Bar 3',
+      3: 'Bar 4',
+      4: 'Bar 5',
+      5: 'Bar 6',
+    };
+
     let data = [
       { xAxis: 0, value: 10 },
       { xAxis: 1, value: 11 },
@@ -52,7 +51,7 @@ export class SingleBarChartComponent implements OnInit {
 
     let dataset = d3.layout.stack()(['value'].map((value) => {
       return data.map((d: any) => {
-        return { x: chartComponent.obj[d.xAxis], y: d.value };
+        return { x: obj[d.xAxis], y: d.value };
       });
     }));
 
@@ -88,11 +87,6 @@ export class SingleBarChartComponent implements OnInit {
 
     svg.selectAll('.x')
       .selectAll('text');
-    /* .attr('x', function (d) { return 6; })
-    .attr('y', function (d) { return 6; })
-    .attr('transform', function (d) {
-      return 'rotate(90)'
-    }); */
 
     svg.selectAll('.y')
       .selectAll('path')
