@@ -1,6 +1,6 @@
 <h2>Stacked Bar Chart:</h2>
 Integrate angular 2 app with interactive Stacked Bar chart having transitions on loading.
-<a target="_blank" href="https://embed.plnkr.co/YXzgfy/">View Demo</a>
+<a target="_blank" href="https://embed.plnkr.co/NaDVxg/">View Demo</a>
 
 <h2>Steps</h2>
 
