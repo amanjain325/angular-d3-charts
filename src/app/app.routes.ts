@@ -3,7 +3,7 @@ import { DoughnutChartComponent } from './doughnut-chart';
 import { PieChartComponent } from './pie-chart';
 import { SingleBarChartComponent } from './single-bar-chart';
 import { MultiBarChartComponent } from './multi-bar-chart';
-
+import { StackedBarChartComponent } from './stacked-bar-chart';
 import { DataResolver } from './app.resolver';
 
 export const ROUTES: Routes = [
@@ -12,5 +12,6 @@ export const ROUTES: Routes = [
   { path: 'piechart',  component: PieChartComponent },
   { path: 'singlebarchart',  component: SingleBarChartComponent },
   { path: 'multibarchart',  component: MultiBarChartComponent },
+  { path: 'stackedbarchart',  component: StackedBarChartComponent },
   { path: '**',  component: DoughnutChartComponent },
 ];

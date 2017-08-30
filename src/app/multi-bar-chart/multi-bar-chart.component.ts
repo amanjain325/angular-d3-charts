@@ -10,13 +10,13 @@ declare let $: any;
 })
 export class MultiBarChartComponent implements OnInit {
 
-  public hours = {
-    4: '12-4 AM',
-    8: '4-8 AM',
-    12: '8-12 AM',
-    16: '12-4 PM',
-    20: '4-8 PM',
-    24: '8-12 PM',
+  public obj = {
+    0: 'Bar 1',
+    1: 'Bar 2',
+    2: 'Bar 3',
+    3: 'Bar 4',
+    4: 'Bar 5',
+    5: 'Bar 6',
   };
 
   public ngOnInit() {
@@ -26,10 +26,12 @@ export class MultiBarChartComponent implements OnInit {
   public renderChart() {
     let chartComponent = this;
     let data = [
-      { day: 4, data1: 10, data2: 14 },
-      { day: 8, data1: 11, data2: 15 },
-      { day: 12, data1: 12, data2: 16 },
-      { day: 16, data1: 13, data2: 17 }
+      { xAxis: 0, value: 10, value2: 10, value3: 12 },
+      { xAxis: 1, value: 11, value2: 10, value3: 12 },
+      { xAxis: 2, value: 12, value2: 10, value3: 12 },
+      { xAxis: 3, value: 12, value2: 10, value3: 12 },
+      { xAxis: 4, value: 11, value2: 10, value3: 12 },
+      { xAxis: 5, value: 10, value2: 10, value3: 12 },
     ];
     let margin = {
       top: 20,
@@ -41,45 +43,41 @@ export class MultiBarChartComponent implements OnInit {
     let height = window.innerHeight / 1.8;
     let fromLeft = 40;
 
-    let svg = d3.select('#multiBarChart')
+    let svg = d3.select('#barChart')
       .append('svg')
       .attr('width', width + 100)
       .attr('height', height + margin.top + margin.bottom + 2)
       .append('g')
       .attr('transform', 'translate(' + (margin.left + fromLeft) + ',' + margin.top + ')');
 
-    let dataset = d3.layout.stack()(['data1', 'data2'].map((value) => {
+    let dataset = d3.layout.stack()(['value1', 'value2', 'value3'].map((value) => {
       return data.map((d: any) => {
-        return { x: chartComponent.hours[d.day], y: +d[value] };
+        return { x: chartComponent.obj[d.xAxis], y: d.value };
       });
     }));
-    // Set x, y and colors
+
     let x = d3.scale.ordinal()
       .domain(dataset[0].map((d) => { return d.x; }))
       .rangeBands([0, width], 1);
 
-    // let x = d3.scale.ordinal()
-    //     .domain(dataset[0].map(function (d) { return d.x; }))
-    //     .rangeRoundBands([0, width]);
     let y = d3.scale.linear()
       .domain([0, d3.max(dataset, (d) => {
         return d3.max(d, (d1) => { return d1.y0 + d1.y; });
       })])
       .range([height, 0]);
-    let colors = ['#169fcd', '#f26722'];
+    let colors = ['#169fcd', '#f26722', '#cecece'];
 
-    // Define and draw axes
     let yAxis = d3.svg.axis()
       .scale(y)
       .orient('left')
+      .ticks(10)
       .tickSize(-width, 0, 0)
-      .tickFormat(d3.format(0));
+      .tickFormat(d3.format('.1S'));
+
     let xAxis = d3.svg.axis()
       .scale(x)
-      .orient('bottom')
-      .tickFormat((d) => {
-        return d;
-      });
+      .orient('bottom');
+
     svg.append('g')
       .attr('class', 'y axis')
       .call(yAxis);
@@ -89,13 +87,16 @@ export class MultiBarChartComponent implements OnInit {
       .call(xAxis);
 
     svg.selectAll('.x')
-      .selectAll('text')
-      .attr('x', (d) => { return 6; })
-      .attr('y', (d) => { return 6; });
-      // rotate labels by 45 degree.
-    /*.attr('transform', function (d) {
-        return 'rotate(45)'
-    });*/
+      .selectAll('text');
+    /* .attr('x', function (d) { return 6; })
+    .attr('y', function (d) { return 6; })
+    .attr('transform', function (d) {
+      return 'rotate(90)'
+    }); */
+
+    svg.selectAll('.y')
+      .selectAll('path')
+      .style('display', 'none');
 
     let groups = svg.selectAll('g.cost')
       .data(dataset)

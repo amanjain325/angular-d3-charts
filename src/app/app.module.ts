@@ -13,6 +13,7 @@ import { DoughnutChartComponent } from './doughnut-chart';
 import { PieChartComponent } from './pie-chart';
 import { SingleBarChartComponent } from './single-bar-chart';
 import { MultiBarChartComponent } from './multi-bar-chart';
+import { StackedBarChartComponent } from './stacked-bar-chart';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
@@ -34,7 +35,8 @@ type StoreType = {
     DoughnutChartComponent,
     PieChartComponent,
     SingleBarChartComponent,
-    MultiBarChartComponent
+    MultiBarChartComponent,
+    StackedBarChartComponent
   ],
   imports: [
     BrowserModule,

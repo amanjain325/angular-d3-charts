@@ -20,6 +20,9 @@ import { AppState } from './app.service';
   <li>  
   <a routerLink="/multibarchart">Multi Bar Chart</a>
   </li>
+  <li>  
+  <a routerLink="/stackedbarchart">Stacked Bar Chart</a>
+  </li>
   </ol>
       <router-outlet></router-outlet>
   `

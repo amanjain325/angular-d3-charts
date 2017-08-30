@@ -10,13 +10,13 @@ declare let $: any;
 })
 export class SingleBarChartComponent implements OnInit {
 
-  public hours = {
-    4: '12-4 AM',
-    8: '4-8 AM',
-    12: '8-12 AM',
-    16: '12-4 PM',
-    20: '4-8 PM',
-    24: '8-12 PM',
+  public obj = {
+    0: 'Bar 1',
+    1: 'Bar 2',
+    2: 'Bar 3',
+    3: 'Bar 4',
+    4: 'Bar 5',
+    5: 'Bar 6',
   };
 
   public ngOnInit() {
@@ -26,10 +26,12 @@ export class SingleBarChartComponent implements OnInit {
   public renderChart() {
     let chartComponent = this;
     let data = [
-      { hour: 4, data1: 10 },
-      { hour: 8, data1: 11 },
-      { hour: 12, data1: 13 },
-      { hour: 16, data1: 13 }
+      { xAxis: 0, value: 10 },
+      { xAxis: 1, value: 11 },
+      { xAxis: 2, value: 12 },
+      { xAxis: 3, value: 12 },
+      { xAxis: 4, value: 11 },
+      { xAxis: 5, value: 10 },
     ];
     let margin = {
       top: 20,
@@ -41,16 +43,16 @@ export class SingleBarChartComponent implements OnInit {
     let height = window.innerHeight / 1.8;
     let fromLeft = 40;
 
-    let svg = d3.select('#singleBarChart')
+    let svg = d3.select('#barChart')
       .append('svg')
       .attr('width', width + 100)
       .attr('height', height + margin.top + margin.bottom + 2)
       .append('g')
       .attr('transform', 'translate(' + (margin.left + fromLeft) + ',' + margin.top + ')');
 
-    let dataset = d3.layout.stack()(['data1'].map((value) => {
+    let dataset = d3.layout.stack()(['value'].map((value) => {
       return data.map((d: any) => {
-        return { x: chartComponent.hours[d.hour], y: d.data1 };
+        return { x: chartComponent.obj[d.xAxis], y: d.value };
       });
     }));
 
