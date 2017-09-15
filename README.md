@@ -65,3 +65,8 @@ It can contain the following properties.
 ```ts
 <angular-d3-donut [spreadSlice]="true" [centerImage]='centerImage' [data]="piedata" (centerImageEvent)="centerImageEvent()"></angular-d3-donut>
 ```
+
+```ts
+public centerImageEvent() {
+}
+```
