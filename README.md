@@ -63,6 +63,7 @@ It can contain the following properties.
 ```
 
 ```ts
+In your.component.ts file write
 public centerImageEvent() {
  // Perform action here
 }
