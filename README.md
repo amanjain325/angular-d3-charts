@@ -1,38 +1,70 @@
 Integrate angular 2 app with interactive d3 charts e.g. Doughnut, Pie, Single Bar chart, Multiple bar chart and Stacked bar chart.
 
-<h2>Charts</h2>
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/doughnut-chart">1. Doughnut Chart:</a></h3>
-<a href="https://embed.plnkr.co/yb7541/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png" />
+Beautiful charts for Angular2 based on d3.js
 
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/pie-chart">2. Pie Chart:</a></h3>
- <a href="https://embed.plnkr.co/i3qi1z/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png">
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/single-bar-chart">3. Single Bar Chart:</a></h3>
- <a href="https://embed.plnkr.co/x8ZgGC/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png">
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/multi-bar-chart">4. Multi Bar Chart:</a></h3>
- <a href="https://embed.plnkr.co/YXzgfy/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/multi-bar-chart-example.png">
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/stacked-bar-chart">5. Stacked Bar Chart:</a></h3>
- <a href="https://embed.plnkr.co/NaDVxg/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/stacked-bar-chart-example.png">
+## Getting Started
+    npm install angular-d3-charts --save
+    
+**Notice**: the latest version on NPM may not reflect the branch `master`. Open an issue and tag me if you need it to be published.
 
-<h2>Steps</h2>
+## Configuration
 
-<p>Script in index.html</p>
-<pre>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-</pre>
+Ensure you import the module:
 
-<ul>
-  <li>Clone this repository into a new folder.</li>
-  </ul>
-<pre>   $ git clone https://github.com/amanjain325/angular-2-d3-charts.git
-   $ cd angular-2-d3-charts
-   $ npm install
-   $ npm start
-   Navigate to http://localhost:3000/</pre>
-   <ul>
-  <li> Navigate to every example and follow the instructions provided.</li>
-</ul>
+```javascript
+import { DoughnutChartComponent, PieChartComponent } from 'angular-d3-charts'; // this is needed!
+
+@NgModule({
+   declarations: [ 
+   DoughnutChartComponent, 
+   PieChartComponent, 
+   ...OtherModules 
+   ] // along with your other modules
+})
+export class AppModule {}
+```
+## Usage
+## Doughnut Chart: 
+```ts
+<angular-d3-donut [data]="donutChartData" ></angular-d3-donut>   
+```
+```ts
+donutChartData = [{
+      id: 0, // number
+      label: 'label name',  // string
+      value: value,  // number
+      color: 'color of slice',  // string,
+      iconImage: 'path of image' // string
+   }]
+```
+
+## Attributes
+
+### Attributes of angular-d3-donut are
+
+It can contain the following properties.
+## Input
+| Option        | Default       | Type   | Description  |
+| :------------ | :------------ | :----- | :--------- |
+| __outerRadius__     | 150 | Number | Outer radius of the donut chart. (Recommended to not to larger than 150) |
+| __innerRadius__   |  70 |  Number | Inner radius of the donut chart. |
+| __data__    | Not set | Object | As above mentioned |
+| __centerImage__   |  Not set |  String | Path of center image in donut. |
+| __spreadSlice__    | False | Boolean | If you want to spread out the slide.
+
+## Output
+| Option |Description |
+| :------------ |:--------- |
+| __centerImageEvent__ | When cemter image is clicked, the centerImageEvent function triggers.  |
+
+
+```ts
+<angular-d3-donut [spreadSlice]="true" [centerImage]='centerImage' [data]="piedata" (centerImageEvent)="centerImageEvent()"></angular-d3-donut>
+```
+
+```ts
+In your.component.ts file write
+public centerImageEvent() {
+ // Perform action here
+}
+```
