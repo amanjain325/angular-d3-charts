@@ -9,11 +9,12 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { DoughnutChartComponent } from './doughnut-chart';
-import { PieChartComponent } from './pie-chart';
+import { DoughnutChart1Component } from './doughnut-chart';
+import { PieChart1Component } from './pie-chart';
 import { SingleBarChartComponent } from './single-bar-chart';
 import { MultiBarChartComponent } from './multi-bar-chart';
 import { StackedBarChartComponent } from './stacked-bar-chart';
+import { DoughnutChartComponent, PieChartComponent } from 'angular-d3-charts';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
@@ -33,7 +34,9 @@ type StoreType = {
   declarations: [
     AppComponent,
     DoughnutChartComponent,
+    DoughnutChart1Component,
     PieChartComponent,
+    PieChart1Component,
     SingleBarChartComponent,
     MultiBarChartComponent,
     StackedBarChartComponent

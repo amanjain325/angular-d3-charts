@@ -1,8 +1,1 @@
-<h1>Doughnut Chart:</h1>
-<div id="donutChart" style="text-align:center">
-</div>
-
-<div id="centerData" style="display:none;text-align:center">
-  <img id="slice_image" alt="Slice Image" />
-  <span id="slice_value"></span>
-</div>
+<angular-d3-donut [outerRadius]=100 [innerRadius]=80 [spreadSlice]=true [data]="piedata" [iconWidth]=20 [iconHeight]=20 (centerImageEvent)="centerImageEvent()"></angular-d3-donut>
