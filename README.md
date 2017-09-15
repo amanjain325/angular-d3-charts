@@ -68,5 +68,6 @@ It can contain the following properties.
 
 ```ts
 public centerImageEvent() {
+ // Perform action here
 }
 ```
