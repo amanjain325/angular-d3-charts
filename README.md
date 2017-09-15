@@ -9,6 +9,11 @@ Beautiful charts for Angular2 based on d3.js
 
 ## Configuration
 
+Add d3 script to your index.html
+```javascript
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+```
+
 Ensure you import the module:
 
 ```javascript
