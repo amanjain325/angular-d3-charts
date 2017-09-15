@@ -3,38 +3,8 @@ Integrate angular 2 app with interactive d3 charts e.g. Doughnut, Pie, Single Ba
 Beautiful charts for Angular2 based on d3.js
 
 <h2>Charts</h2>
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/doughnut-chart">1. Doughnut Chart:</a></h3>
-<a href="https://embed.plnkr.co/yb7541/">View Demo</a>
+<h3>1. Doughnut Chart:</h3>
 <img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png" />
 
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/pie-chart">2. Pie Chart:</a></h3>
- <a href="https://embed.plnkr.co/i3qi1z/">View Demo</a>
+<h3>2. Pie Chart:</h3>
 <img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png">
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/single-bar-chart">3. Single Bar Chart:</a></h3>
- <a href="https://embed.plnkr.co/x8ZgGC/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png">
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/multi-bar-chart">4. Multi Bar Chart:</a></h3>
- <a href="https://embed.plnkr.co/YXzgfy/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/multi-bar-chart-example.png">
-<h3><a href="https://github.com/amanjain325/angular-2-d3-charts/tree/master/src/app/stacked-bar-chart">5. Stacked Bar Chart:</a></h3>
- <a href="https://embed.plnkr.co/NaDVxg/">View Demo</a>
-<img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/stacked-bar-chart-example.png">
-
-<h2>Steps</h2>
-
-<p>Script in index.html</p>
-<pre>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-</pre>
-
-<ul>
-  <li>Clone this repository into a new folder.</li>
-  </ul>
-<pre>   $ git clone https://github.com/amanjain325/angular-2-d3-charts.git
-   $ cd angular-2-d3-charts
-   $ npm install
-   $ npm start
-   Navigate to http://localhost:3000/</pre>
-   <ul>
-  <li> Navigate to every example and follow the instructions provided.</li>
-</ul>
