@@ -15,33 +15,23 @@ export class SingleBarChartComponent implements OnInit {
   }
 
   public renderChart() {
-    let obj = {
-      0: 'Bar 1',
-      1: 'Bar 2',
-      2: 'Bar 3',
-      3: 'Bar 4',
-      4: 'Bar 5',
-      5: 'Bar 6',
-    };
-
     let data = [
-      { xAxis: 0, value: 10 },
-      { xAxis: 1, value: 11 },
-      { xAxis: 2, value: 12 },
-      { xAxis: 3, value: 12 },
-      { xAxis: 4, value: 11 },
-      { xAxis: 5, value: 10 },
+      { label: 'Bar 1', value: 10 },
+      { label: 'Bar 2', value: 11 },
+      { label: 'Bar 3', value: 12 },
+      { label: 'Bar 4', value: 12 },
+      { label: 'Bar 5', value: 11 },
+      { label: 'Bar 6', value: 10 },
     ];
-    let margin = {
-      top: 20,
-      right: 160,
-      bottom: 35,
-      left: 0
-    };
+    let margin = { top: 20, right: 160, bottom: 35, left: 0 };
     let width = 700;
-    let height = window.innerHeight / 1.8;
+    let height = 400;
     let fromLeft = 40;
-
+    let colors = 'red';
+    let transitionDuration = 1000;
+    let transitionDelay = 100;
+    let barWidth = '14px';
+    let yAxisd3Format = '.1S';
     let svg = d3.select('#barChart')
       .append('svg')
       .attr('width', width + 100)
@@ -51,7 +41,7 @@ export class SingleBarChartComponent implements OnInit {
 
     let dataset = d3.layout.stack()(['value'].map((value) => {
       return data.map((d: any) => {
-        return { x: obj[d.xAxis], y: d.value };
+        return { x: d.label, y: d.value };
       });
     }));
 
@@ -64,14 +54,13 @@ export class SingleBarChartComponent implements OnInit {
         return d3.max(d, (d1) => { return d1.y0 + d1.y; });
       })])
       .range([height, 0]);
-    let colors = ['#169fcd', '#f26722'];
 
     let yAxis = d3.svg.axis()
       .scale(y)
       .orient('left')
       .ticks(10)
       .tickSize(-width, 0, 0)
-      .tickFormat(d3.format('.1S'));
+      .tickFormat(d3.format(yAxisd3Format));
 
     let xAxis = d3.svg.axis()
       .scale(x)
@@ -96,7 +85,9 @@ export class SingleBarChartComponent implements OnInit {
       .data(dataset)
       .enter().append('g')
       .attr('class', 'cost')
-      .style('fill', (d, i) => { return colors[i]; });
+      .style('fill', (d, i) => {
+        return colors;
+      });
     let rect = groups.selectAll('rect')
       .data((d) => { return d; })
       .enter()
@@ -104,10 +95,10 @@ export class SingleBarChartComponent implements OnInit {
       .attr('x', (d) => { return x(d.x); })
       .attr('y', height - 1)
       .attr('height', 0)
-      .attr('width', '11px')
+      .attr('width', barWidth)
       .transition()
-      .duration(1000)
-      .delay(100)
+      .duration(transitionDuration)
+      .delay(transitionDelay)
       .attr('y', (d) => { return y(d.y0 + d.y); })
       .attr('height', (d) => { return y(d.y0) - y(d.y0 + d.y); });
   }

@@ -14,7 +14,7 @@ import { PieChart1Component } from './pie-chart';
 import { SingleBarChartComponent } from './single-bar-chart';
 import { MultiBarChartComponent } from './multi-bar-chart';
 import { StackedBarChartComponent } from './stacked-bar-chart';
-import { DoughnutChartComponent, PieChartComponent } from 'angular-d3-charts';
+import { DoughnutChartComponent, PieChartComponent, BarChartComponent } from 'angular-d3-charts';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
@@ -39,7 +39,8 @@ type StoreType = {
     PieChart1Component,
     SingleBarChartComponent,
     MultiBarChartComponent,
-    StackedBarChartComponent
+    StackedBarChartComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,

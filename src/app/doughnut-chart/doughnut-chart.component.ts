@@ -9,41 +9,52 @@ declare let $: any;
   templateUrl: './doughnut-chart.component.html'
 })
 export class DoughnutChart1Component {
-  public centerImage = '';
+  public centerImage = 'assets/img/6.png';
   public piedata = [{
     id: 0,
     label: 'slice 1',
-    percentage: 10,
     value: 10,
     color: 'blue',
-    iconImage: 'assets/img/1.png'
   }, {
     id: 1,
     label: 'slice 2',
-    percentage: 20,
     value: 20,
     color: 'black',
-    iconImage: 'assets/img/2.png'
   }, {
     id: 2,
     label: 'slice 3',
-    percentage: 30,
     value: 30,
     color: 'red',
-    iconImage: 'assets/img/3.png'
   }, {
     id: 3,
     label: 'slice 4',
-    percentage: 20,
     value: 20,
     color: 'black',
-    iconImage: 'assets/img/4.png'
   }, {
     id: 4,
     label: 'slice 5',
-    percentage: 20,
     value: 10,
     color: 'red',
-    iconImage: 'assets/img/5.png'
   }];
+
+  bardata = [
+    { label: 'Bar 1', value: 10, value2: 10, value3: 12 },
+    { label: 'Bar 2', value: 11, value2: 10, value3: 12 },
+    { label: 'Bar 3', value: 12, value2: 10, value3: 12 },
+    { label: 'Bar 4', value: 12, value2: 10, value3: 12 },
+    { label: 'Bar 5', value: 11, value2: 10, value3: 12 },
+    { label: 'Bar 6', value: 10, value2: 10, value3: 12 },
+  ];
+
+  ngOnInit() {
+    let valueArray = [];
+    for (let i = 1; i < 3; i++) {
+      valueArray.push('value' + i);
+    }
+    console.log(valueArray);
+  }
+
+  public centerImageEvent() {
+  }
+
 }
