@@ -9,7 +9,7 @@ declare let $: any;
   templateUrl: './pie-chart.component.html'
 })
 export class PieChart1Component {
-  public piedata = [{
+  public pieChartData = [{
     id: 0,
     label: 'slice 1',
     percentage: 10,

@@ -37,23 +37,6 @@ export class DoughnutChart1Component {
     color: 'red',
   }];
 
-  bardata = [
-    { label: 'Bar 1', value: 10, value2: 10, value3: 12 },
-    { label: 'Bar 2', value: 11, value2: 10, value3: 12 },
-    { label: 'Bar 3', value: 12, value2: 10, value3: 12 },
-    { label: 'Bar 4', value: 12, value2: 10, value3: 12 },
-    { label: 'Bar 5', value: 11, value2: 10, value3: 12 },
-    { label: 'Bar 6', value: 10, value2: 10, value3: 12 },
-  ];
-
-  ngOnInit() {
-    let valueArray = [];
-    for (let i = 1; i < 3; i++) {
-      valueArray.push('value' + i);
-    }
-    console.log(valueArray);
-  }
-
   public centerImageEvent() {
   }
 

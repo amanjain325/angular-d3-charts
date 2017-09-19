@@ -17,28 +17,5 @@ Integrate angular 2 app with interactive Multi Bar chart having transitions on l
    $ npm install
    $ npm start
    Navigate to http://localhost:3000/multibarchart</pre>
-
-<p>Add the css to your style.css</p>
-<pre>
-.tick text{
-  font-size: 12px;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #4C5554;
-  stroke-width: 1;
-}
-
-.x.axis .tick line{
-display: none
-}
-
-.domain{
-    display: block !important;
-    stroke: #4C5554 !important;
-    stroke-width: 2 !important;
-}
-</pre>
+   
 <img src="https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/multi-bar-chart-example.png">
