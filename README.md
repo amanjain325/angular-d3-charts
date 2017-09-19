@@ -4,8 +4,6 @@ Beautiful charts for Angular2+ based on d3.js
 
 **Last updated- 19th September 2017(Bar chart)**
 
-**Important: Bar charts are under developement**.
-
 ## Getting Started
     npm install angular-d3-charts --save
     
@@ -61,7 +59,6 @@ export class AppModule {}
 ## Doughnut Chart: 
 ```ts
 <angular-d3-donut [id]="donutChartId" [data]="donutChartData"></angular-d3-donut>   
-<angular-d3-donut [data]="donutChartData"></angular-d3-donut>   
 ```
 ```ts
 public donutChartData = [{
@@ -121,7 +118,6 @@ public centerImageEvent() {
 ## Pie Chart: 
 ```ts
 <angular-d3-pie [id]="pieChartId" [data]="pieChartData"></angular-d3-pie>   
-<angular-d3-pie [data]="pieChartData"></angular-d3-pie>   
 ```
 ```ts
 public pieChartData = [{
@@ -160,10 +156,6 @@ It can contain the following properties.
 ```
 ```ts
 public barChartData = [{
-<angular-d3-bar [data]="barChartData"></angular-d3-bar>   
-```
-```ts
-barChartData = [{
       id: 0, // number
       label: 'label name',  // string
       value1: value,  // number
@@ -175,10 +167,6 @@ barChartData = [{
       id: 1, // number
       label: 'label name',  // string
       value1: value,  // number
-   },
-      id: 1, // number
-      label: 'label name',  // string
-       value1: value,  // number
       value2: value,  // number
       value3: value,  // number
       ... ,
@@ -229,17 +217,6 @@ It can contain the following properties.
 --- Multi Stacked Bar Chart --- // dataColumns = [3, 2];
 <angular-d3-bar [id]="test1" [alphaDistance]="0.3" [data]="barChartData" [dataColumns]="dataColumns1" [colors]="colors" [yAxisTicks]=10 [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
 [barWidth]="'16px'"></angular-d3-bar>
-| __color__    | ['blue'] | Array | Color of the bars. |
-| __dataGroup__    | 1 | Number | Number of data. |
-| __yAxisTicks__    | 10 | Number | Ticks on Y axis. |
-
-```ts
-<angular-d3-bar [data]="bardata" [color]="colors" [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30 [barWidth]="'16px'"></angular-d3-bar>
-```
-
-```ts
-<angular-d3-bar [data]="bardata" [color]="colors" [dataGroup]="3" [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
-  [barWidth]="'16px'"></angular-d3-bar>
 ```
 
 ```ts
