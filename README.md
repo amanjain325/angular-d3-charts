@@ -6,6 +6,9 @@ Beautiful charts for Angular2+ based on d3.js
 1. Labels showing on donut chart and pie chart.
 2. Bar charts x axis labels position.
 
+## Github
+    (https://github.com/amanjain325/angular-d3-charts)
+
 ## Getting Started
     npm install angular-d3-charts --save
     
