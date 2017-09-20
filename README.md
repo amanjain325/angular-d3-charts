@@ -7,7 +7,8 @@ Beautiful charts for Angular2+ based on d3.js
 2. Bar charts x axis labels position.
 
 ## Github
-    (https://github.com/amanjain325/angular-d3-charts)
+
+<https://github.com/amanjain325/angular-d3-charts>
 
 ## Getting Started
     npm install angular-d3-charts --save
@@ -48,6 +49,13 @@ Add these styles to your main stylesheet.
         display: block !important;
         stroke: #4C5554 !important;
         stroke-width: 2 !important;
+    }
+    .legend {
+        font-size: 12px;
+        font-family: sans-serif;
+        rect {
+            stroke-width: 2;
+        }
     }
 ```
 
@@ -249,7 +257,8 @@ It can contain the following properties.
 colors = ['red', 'blue', 'green']
 ```
 
-Examples: 
+### Examples:
+
 ```ts
 public colors = ['red', 'green', 'blue']
 public  dataColumns = [1]; // Single Bar Chart
@@ -272,3 +281,8 @@ public  barChartData = [{
  <angular-d3-bar [id]="test2" [data]="barChartData" [dataColumns]="dataColumns" [colors]="colors" [yAxisTicks]=10 [width]=400
     [height]=200 [transitionDuration]=1000 [transitionDelay]=30 [barWidth]="'16px'"></angular-d3-bar>
 ```
+
+## Github
+
+<https://github.com/amanjain325/angular-d3-charts>
+
