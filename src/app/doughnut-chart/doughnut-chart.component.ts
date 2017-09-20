@@ -14,30 +14,33 @@ export class DoughnutChart1Component {
     id: 0,
     label: 'slice 1',
     value: 10,
-    color: 'blue',
+    color: 'red',
   }, {
     id: 1,
     label: 'slice 2',
     value: 20,
-    color: 'black',
+    color: 'blue',
   }, {
     id: 2,
     label: 'slice 3',
     value: 30,
-    color: 'red',
+    color: 'green',
   }, {
     id: 3,
     label: 'slice 4',
     value: 20,
-    color: 'black',
+    color: 'yellow',
   }, {
     id: 4,
     label: 'slice 5',
     value: 10,
-    color: 'red',
+    color: 'pink',
   }];
 
   public centerImageEvent() {
+  }
+
+  public ngOnInit(){
   }
 
 }

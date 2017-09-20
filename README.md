@@ -2,7 +2,9 @@ Integrate angular 2+ app with interactive d3 charts e.g. **Doughnut, Pie, Single
 
 Beautiful charts for Angular2+ based on d3.js
 
-**Last updated- 19th September 2017(Bar chart)**
+**Last updated- 20th September 2017**
+1. Labels showing on donut chart and pie chart.
+2. Bar charts x axis labels position.
 
 ## Getting Started
     npm install angular-d3-charts --save
@@ -85,14 +87,19 @@ It can contain the following properties.
 ## Input
 | Option        | Default       | Type   | Description  |
 | :------------ | :------------ | :----- | :--------- |
-| __id__    | donutChart | String | Unique Id of the bar chart. |
+| __id__    | donutChart | String | Unique Id of the donut chart. |
+| __width__     | 700 | Number | Width of the donut chart. |
+| __height__     | 400 | Number | Height of the donut chart. |
 | __outerRadius__     | 150 | Number | Outer radius of the donut chart. (Recommended to not to larger than 150) |
 | __innerRadius__   |  70 |  Number | Inner radius of the donut chart. |
 | __data__    | Not set | Object | As above mentioned |
 | __centerImage__   |  Not set |  String | Path of center image in donut. |
-| __spreadSlice__    | False | Boolean | If you want to spread out the slide.
-| __iconWidth__    | 40 | Number | Width of the icon images on slices.
-| __iconHeight__    | 40 | Number | Height of the icon images on slices.
+| __spreadSlice__    | False | Boolean | If you want to spread out the slide. |
+| __iconWidth__    | 40 | Number | Width of the icon images on slices. |
+| __iconHeight__    | 40 | Number | Height of the icon images on slices. |
+| __middleText__    | Not Set | String | Text in the middle of the inner circle |
+| __middleTextColor__    | Black | String | Color of the middle text  |
+| __middleTextFontSize__    | 1em | String | Size of the middle text  |
 
 ## Output
 | Option |Description |
@@ -108,6 +115,14 @@ It can contain the following properties.
 <angular-d3-donut [outerRadius]=100 [innerRadius]=80 [spreadSlice]=true [data]="piedata" (centerImageEvent)="centerImageEvent()"></angular-d3-donut>
 ```
 
+```ts
+<angular-d3-donut [width]=800 [outerRadius]=90 [middleText]="'test'" [middleTextFontSize]="'2em'" [middleTextColor]="'red'" [innerRadius]=80 [spreadSlice]=false [data]="piedata" [iconWidth]=20 [iconHeight]=20 (centerImageEvent)="centerImageEvent()"></angular-d3-donut>
+```
+
+**For text in middle of Donut chart:**
+```ts
+<angular-d3-donut [outerRadius]=100 [middleText]="'test'" [middleTextFontSize]="'2em'" [middleTextColor]="'red'" [innerRadius]=80 [spreadSlice]=false [data]="piedata" [iconWidth]=20 [iconHeight]=20 (centerImageEvent)="centerImageEvent()"></angular-d3-donut>
+```
 ```ts
 In your.component.ts file write
 public centerImageEvent() {
@@ -141,8 +156,10 @@ It can contain the following properties.
 ## Input
 | Option        | Default       | Type   | Description  |
 | :------------ | :------------ | :----- | :--------- |
-| __id__    | pieChart | String | Unique Id of the bar chart. |
-| __outerRadius__     | 150 | Number | Outer radius of the donut chart. (Recommended to not to larger than 150) |
+| __id__    | pieChart | String | Unique Id of the pie chart. |
+| __width__     | 700 | Number | Width of the pie chart. |
+| __height__     | 400 | Number | Height of the pie chart. |
+| __outerRadius__     | 150 | Number | Outer radius of the pie chart. (Recommended to not to larger than 150) |
 | __data__    | Not set | Object | As above mentioned |
 | __spreadSlice__    | False | Boolean | If you want to spread out the slide.
 

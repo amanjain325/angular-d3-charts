@@ -27,3 +27,14 @@ display: none
     stroke: #4C5554 !important;
     stroke-width: 2 !important;
 }
+
+.legend {
+  font-size: 12px;
+  font-family: sans-serif;
+  rect {
+    stroke-width: 2;
+  }
+  text {
+    fill: lightcyan;
+  }
+}
