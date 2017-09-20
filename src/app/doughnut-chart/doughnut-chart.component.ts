@@ -12,27 +12,27 @@ export class DoughnutChart1Component {
   public centerImage = 'assets/img/6.png';
   public piedata = [{
     id: 0,
-    label: 'slice 1',
+    label: 'water',
     value: 10,
     color: 'red',
   }, {
     id: 1,
-    label: 'slice 2',
+    label: 'land',
     value: 20,
     color: 'blue',
   }, {
     id: 2,
-    label: 'slice 3',
+    label: 'sand',
     value: 30,
     color: 'green',
   }, {
     id: 3,
-    label: 'slice 4',
+    label: 'grass',
     value: 20,
     color: 'yellow',
   }, {
     id: 4,
-    label: 'slice 5',
+    label: 'earth',
     value: 10,
     color: 'pink',
   }];
