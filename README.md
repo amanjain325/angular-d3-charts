@@ -1,13 +1,12 @@
-Integrate angular 2+ app with interactive d3 charts e.g. **Doughnut, Pie, Single Bar chart, Multiple bar chart and Stacked bar chart**.
+Integrate Angular 2+ app with interactive d3 charts e.g. **Doughnut, Pie, Single Bar chart, Multiple bar chart and Stacked bar chart**.
 
 Beautiful charts for Angular2+ based on d3.js
 
 **Last updated- 20th September 2017**
-1. Labels showing on donut chart and pie chart.
-2. Bar charts x axis labels position.
+**1. Labels showing on donut chart and pie chart.**
+**2. Bar charts x axis labels position bug resolved.**
 
 ## Github
-
 <https://github.com/amanjain325/angular-d3-charts>
 
 ## Getting Started
@@ -28,7 +27,8 @@ Add d3 script to your index.html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 ```
 
-Add these styles to your main stylesheet.
+Add these styles to your main stylesheet. 
+**For Bar Charts Only**
 ```css
    .tick text {
         font-size: 12px;
@@ -96,6 +96,41 @@ public donutChartData = [{
    ]
 ```
 
+### Example:
+
+```html
+<angular-d3-donut [id]="donutChartId" [data]="donutChartData"></angular-d3-donut>
+```
+
+```ts
+public donutChartData = [{
+    id: 0,
+    label: 'water',
+    value: 20,
+    color: 'red',
+  }, {
+    id: 1,
+    label: 'land',
+    value: 20,
+    color: 'blue',
+  }, {
+    id: 2,
+    label: 'sand',
+    value: 30,
+    color: 'green',
+  }, {
+    id: 3,
+    label: 'grass',
+    value: 20,
+    color: 'yellow',
+  }, {
+    id: 4,
+    label: 'earth',
+    value: 10,
+    color: 'pink',
+  }];
+```
+
 ## Attributes
 
 ### Attributes of angular-d3-donut are
@@ -121,7 +156,7 @@ It can contain the following properties.
 ## Output
 | Option |Description |
 | :------------ |:--------- |
-| __centerImageEvent__ | When cemter image is clicked, the centerImageEvent function triggers.  |
+| __centerImageEvent__ | When center image is clicked, the centerImageEvent function triggers.  |
 
 
 ```ts
@@ -148,7 +183,7 @@ public centerImageEvent() {
 ```
 
 ## Pie Chart: 
-```ts
+```html
 <angular-d3-pie [id]="pieChartId" [data]="pieChartData"></angular-d3-pie>   
 ```
 ```ts
@@ -163,6 +198,31 @@ public pieChartData = [{
       value: value,  // number
       color: 'color of slice',  // string,
    }, ... ]
+```
+
+### Example:
+
+```html
+<angular-d3-pie [id]="pieChartId" [data]="pieChartData"></angular-d3-pie>
+```
+
+```ts
+public pieChartData = [{
+    id: 0,
+    label: 'slice 1',
+    value: 50,
+    color: 'blue',
+  }, {
+    id: 1,
+    label: 'slice 2',
+    value: 20,
+    color: 'black',
+  }, {
+    id: 2,
+    label: 'slice 3',
+    value: 30,
+    color: 'red',
+  }]
 ```
 
 ## Attributes
@@ -185,7 +245,7 @@ It can contain the following properties.
 ```
 
 ## Bar Chart: 
-```ts
+```html
 <angular-d3-bar [id]="barChartId" [data]="barChartData"></angular-d3-bar>   
 ```
 ```ts
@@ -232,14 +292,14 @@ It can contain the following properties.
 
 ### Single Bar Chart
 
-```ts
+```html
 --- Single Bar Chart --- // dataColumns = [1];
 <angular-d3-bar [id]="test2" [data]="barChartData" [dataColumns]="dataColumns" [colors]="colors" [yAxisTicks]=10 [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
 [barWidth]="'16px'"></angular-d3-bar>
 ```
 ### Stacked Bar Chart 
 
-```ts
+```html
 --- Stacked Bar Chart --- // dataColumns = [3];
 <angular-d3-bar [id]="test1" [alphaDistance]="0.3" [data]="barChartData" [dataColumns]="dataColumns1" [colors]="colors" [yAxisTicks]=10 [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
 [barWidth]="'16px'"></angular-d3-bar>
@@ -247,7 +307,7 @@ It can contain the following properties.
 
 ### Multi Bar Chart 
 
-```ts
+```html
 --- Multi Stacked Bar Chart --- // dataColumns = [3, 2];
 <angular-d3-bar [id]="test1" [alphaDistance]="0.3" [data]="barChartData" [dataColumns]="dataColumns1" [colors]="colors" [yAxisTicks]=10 [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
 [barWidth]="'16px'"></angular-d3-bar>
@@ -283,6 +343,5 @@ public  barChartData = [{
 ```
 
 ## Github
-
 <https://github.com/amanjain325/angular-d3-charts>
 
