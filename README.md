@@ -11,6 +11,12 @@ Beautiful charts for Angular2+ based on d3.js
     
 **Notice**: The latest version on NPM may not reflect the branch `master`. Open an issue and tag me if you need it to be published.
 
+<kbd>![Doughnut Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png)</kbd>
+<kbd>![Pie Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png)</kbd>
+<kbd>![Single Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png)</kbd>
+<kbd>![Multi Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/multi-bar-chart-example.png)</kbd>
+<kbd>![Stacked Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/stacked-bar-chart-example.png)</kbd>
+
 ## Configuration
 
 Add d3 script to your index.html
