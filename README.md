@@ -3,7 +3,9 @@ Integrate Angular 2+ app with interactive d3 charts e.g. **Doughnut, Pie, Single
 Beautiful charts for Angular2+ based on d3.js
 
 **Last updated- 20th September 2017**
+
 **1. Labels showing on donut chart and pie chart.**
+
 **2. Bar charts x axis labels position bug resolved.**
 
 ## Github
@@ -13,12 +15,6 @@ Beautiful charts for Angular2+ based on d3.js
     npm install angular-d3-charts --save
     
 **Notice**: The latest version on NPM may not reflect the branch `master`. Open an issue and tag me if you need it to be published.
-
-<kbd>![Doughnut Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png)</kbd>
-<kbd>![Pie Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png)</kbd>
-<kbd>![Single Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png)</kbd>
-<kbd>![Multi Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/multi-bar-chart-example.png)</kbd>
-<kbd>![Stacked Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/stacked-bar-chart-example.png)</kbd>
 
 ## Configuration
 
@@ -131,6 +127,8 @@ public donutChartData = [{
   }];
 ```
 
+<kbd>![Doughnut Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/donut-chart-example.png)</kbd>
+
 ## Attributes
 
 ### Attributes of angular-d3-donut are
@@ -224,6 +222,7 @@ public pieChartData = [{
     color: 'red',
   }]
 ```
+<kbd>![Pie Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/pie-chart-example.png)</kbd>
 
 ## Attributes
 
@@ -291,27 +290,28 @@ It can contain the following properties.
 | __dataColumns__    | [1] | Array | Length of array = Number of columns ,Value on index = number of stacked bars on particular column.|
 
 ### Single Bar Chart
-
+### dataColumns = [1];
 ```html
---- Single Bar Chart --- // dataColumns = [1];
 <angular-d3-bar [id]="test2" [data]="barChartData" [dataColumns]="dataColumns" [colors]="colors" [yAxisTicks]=10 [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
 [barWidth]="'16px'"></angular-d3-bar>
 ```
-### Stacked Bar Chart 
+<kbd>![Single Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/single-bar-chart-example.png)</kbd>
 
+### Stacked Bar Chart 
+### dataColumns = [3];
 ```html
---- Stacked Bar Chart --- // dataColumns = [3];
 <angular-d3-bar [id]="test1" [alphaDistance]="0.3" [data]="barChartData" [dataColumns]="dataColumns1" [colors]="colors" [yAxisTicks]=10 [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
 [barWidth]="'16px'"></angular-d3-bar>
 ```
+<kbd>![Stacked Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/stacked-bar-chart-example.png)</kbd>
 
 ### Multi Bar Chart 
-
+### dataColumns = [3, 2];
 ```html
---- Multi Stacked Bar Chart --- // dataColumns = [3, 2];
 <angular-d3-bar [id]="test1" [alphaDistance]="0.3" [data]="barChartData" [dataColumns]="dataColumns1" [colors]="colors" [yAxisTicks]=10 [width]=400 [height]=200 [transitionDuration]=1000 [transitionDelay]=30
 [barWidth]="'16px'"></angular-d3-bar>
 ```
+<kbd>![Multi Bar Chart Example](https://raw.githubusercontent.com/amanjain325/angular-2-d3-charts/master/src/assets/img/multi-bar-chart-example.png)</kbd>
 
 ```ts
 colors = ['red', 'blue', 'green']
