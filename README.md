@@ -11,6 +11,9 @@ Beautiful charts for Angular2+ based on d3.js
 ## Github
 <https://github.com/amanjain325/angular-d3-charts>
 
+### NPM
+<https://www.npmjs.com/package/angular-d3-charts>
+
 ## Getting Started
     npm install angular-d3-charts --save
     
@@ -344,3 +347,5 @@ public  barChartData = [{
 ## Github
 <https://github.com/amanjain325/angular-d3-charts>
 
+### NPM
+<https://www.npmjs.com/package/angular-d3-charts>
