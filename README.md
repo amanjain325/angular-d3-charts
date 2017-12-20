@@ -1,3 +1,8 @@
+## angular-d3-charts
+
+[![NPM Downloads](http://img.shields.io/npm/dm/angular-d3-charts.svg)](https://www.npmjs.org/package/angular-d3-charts)
+[![NPM Version](http://img.shields.io/npm/v/angular-d3-charts.svg)](https://www.npmjs.org/package/angular-d3-charts)
+
 Integrate Angular 2+ app with interactive d3 charts e.g. **Doughnut, Pie, Single Bar chart, Multiple bar chart and Stacked bar chart**.
 
 Beautiful charts for Angular2+ based on d3.js
